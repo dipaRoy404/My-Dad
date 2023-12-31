@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+*::selection {
+    color: white;
+    background-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#main {
+    width: 100%;
+}
+
+
+/* Navbar of home */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 35px;
+}
+
+nav img {
+    width: 10vh;
+    height: 5vh;
+    pointer-events: none;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    top: 20px;
+    right: 35px;
+    position: fixed;
+}
+
+.menu-icon .line {
+    height: 2px;
+    width: 25px;
+    background-color: black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+/* Navbar Showcase */
+.navbar-showcase {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+}
+
+.n-left {
+    backdrop-filter: blur(2px);
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+}
+
+.n-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    padding: 4% 5%;
+    box-shadow: -2px 0 100px rgba(0, 0, 0, 0.163);
+}
+
+.n-right h5 {
+    font-weight: normal;
+    color: black;
+    opacity: .4;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.n-r-top {
+    display: flex;
+    gap: 25%;
+    opacity: 0;
+}
+
+.nav-social {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+.nav-social a {
+    width: 80px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+/* --Social Hover-- */
+.nav-social a span {
+    position: absolute;
+    top: 0;
+    transition: top .25s ease-in-out;
+}
+.nav-social a span:nth-child(2) {
+    top: 100%;
+    left: 0;
+}
+.nav-social a:hover span:nth-child(1) {
+    top: -100%;
+}
+.nav-social a:hover span:nth-child(2) {
+    top: 0;
+}
+
+
+
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+.nav-menu a h2 {
+    height: 60px;
+    width: 300px;
+    font-weight: 400;
+    font-size: 50px;
+    position: relative;
+    overflow: hidden;
+}
+/* --Menu Hover-- */
+.nav-menu a h2 span {
+    position: absolute;
+    top: 0;
+    transition: top .25s ease-in-out;
+}
+.nav-menu a h2 span:nth-child(2) {
+    top: 100%;
+    left: 0;
+}
+.nav-menu a h2:hover span:nth-child(1) {
+    top: -100%;
+}
+.nav-menu a h2:hover span:nth-child(2) {
+    top: 0;
+}
+
+
+.n-r-bottom {
+    position: absolute;
+    bottom: 50px;
+}
+.nav-get-in-touch a {
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+
+/* --Get In Touch Hover-- */
+.nav-get-in-touch a::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    opacity: .3;
+}
+.nav-get-in-touch a::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    transition: all .3s ease-in-out;
+}
+.nav-get-in-touch a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+/* -----Home section----- */
+.home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    height: 80vh;
+}
+
+.home h2 {
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+
+.home .headings {
+    display: flex;
+    gap: 2vw;
+}
+
+.home .headings h1 {
+    -webkit-text-stroke: 0.5px black;
+    color: transparent;
+    font-family: "poppins", sans-serif;
+    font-size: 7vw;
+    transition: all 0.3s;
+}
+
+.home .headings h1:hover {
+    color: black;
+    -webkit-text-stroke: 0;
+}
+
+.home p {
+    position: absolute;
+    left: 0;
+    bottom: -10vh;
+    font-size: 1.7vw;
+    font-weight: 400;
+}
+
+.home p span {
+    position: relative;
+    /* font-weight: 500; */
+    color: rgb(255, 0, 0);
+    color: black;
+    /* opacity: .5; */
+    transition: all 0.5s ease-in-out;
+}
+.home p span::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: red;
+    transition: all 0.5s ease-in-out;
+}
+.home p:hover span::after {
+    width: 0;
+}
+.home p:hover span {
+    color: red;
+    font-weight: 500;
+}
+
+
+
+
+/* ------Featured Section------ */
+.featured {
+    margin-top: 10vh;
+    padding: 9vw;
+    width: 100%;
+}
+
+.featured header h1 {
+    font-size: 3.5vw;
+    font-weight: 500;
+}
+
+.featured header h1:nth-child(2) {
+    -webkit-text-stroke: .5px black;
+    color: transparent;
+}
+
+.featured main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 2vw;
+}
+
+.f-left {
+    overflow: hidden;
+    width: 45%;
+    height: 100%;
+}
+
+.f-left-elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+    width: 100%;
+    height: 100%;
+}
+
+.f-left-elem h1 {
+    font-size: 2.7vw;
+    font-weight: 400;
+}
+
+.f-left-elem h3 {
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+
+.f-left-elem h4 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    opacity: 0.5;
+
+}
+
+.f-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 45%;
+    height: 100%;
+}
+
+.f-right .images {
+    height: 90%;
+    width: 90%;
+}
+
+.f-right .images img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover !important;
+}
+
+footer.btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer.btn-div button {
+    position: relative;
+    padding: 1.3vw 2.5vw;
+    font-size: 1.1vw;
+    border: 1px solid black;
+    border-radius: 100px;
+    font-weight: 500;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+footer.btn-div button:after {
+    content: "Go to next page";
+    position: absolute;
+    height: 00%;
+    width: 100%;
+    bottom: -50%;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+footer.btn-div button.view-all-pages::after {
+    content: "View all pages";
+}
+
+footer.btn-div button:hover {
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+footer.btn-div button:hover:after {
+    height: 200%;
+}
+
+
+
+
+/* ------Developement and Designs------ */
+.dev {
+    width: 100%;
+    padding: 15vw;
+}
+
+.dev h1 {
+    font-size: 4.5vw;
+    font-weight: 400;
+}
+
+.dev p {
+    font-size: 1.7vw;
+    margin-top: 3vw;
+}
+
+
+
+
+
+/* ------Developement and Designs------ */
+.works {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.works .work {
+    width: 26%;
+    cursor: pointer;
+}
+
+.work .img {
+    width: 100%;
+    height: 15vw;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.work .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.work h5 {
+    margin: 1.5vw 1vw;
+    padding: .95vw 1.7vw;
+    background-color: #f3f3f3;
+    width: fit-content;
+    border-radius: 5vw;
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.work h3 {
+    font-size: 1.49vw;
+    font-weight: 500;
+}
+.work h3 span {
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+.work h3 span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 10%;
+    width: 0;
+    background-color: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.work:hover h3 span::after {
+    width: 100%;
+    background-color: lightseagreen;
+}
+.work:hover h3 span {
+    color: lightseagreen;
+}
+
+.works footer {
+    margin-top: 5vw;
+}
+
+.works footer.btn-div button {
+    scale: 0.8;
+}
+
+
+/* ---Shery Js code--- */
+.movercirc.blend {
+    mix-blend-mode: none;
+    filter: none;
+}
+
+.mousefollower {
+    width: 10px;
+    height: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .n-left {
+        width: 0;
+    }
+    .n-right {
+        width: 100%;
+        padding: 10% 8%;
+    }
+
+    .featured main {
+        height: 50vh;
+    }
+
+    .featured main .f-left-elem {
+        margin-bottom: 20px;
+    }
+
+    .featured main .f-right {
+        height: 50vh;
+        width: 60%;
+    }
+}
