@@ -53,6 +53,15 @@ Shery.hoverWithMediaCircle(".js-hvr", {
 });
 
 
+Shery.imageMasker(".js-masker" /* Element to target.*/, {
+  //Parameters are optional.
+  mouseFollower: true,
+  text: "View",
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 1,
+});
+
+
 
 
 
